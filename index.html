@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  
+  <style>
+    body {
+      font-family:  Calibri;
+      font-weight: bold;
+      margin: 0;
+      background-color: antiquewhite;
+      
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h1 {
+      font-size: 10rem;
+      text-shadow: 2px 2px 2px gray;
+    }
+    .btnContainer {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      align-content: space-between;
+      gap: 5%
+      
+    }
+
+    .btn{
+      border: 0;
+      font-size: 9rem;
+      width: 150px;
+      background-color: red;
+      border-radius: 10px;
+      color:white;
+      text-shadow: 2px 2px 2px pink;
+      box-shadow: 5px 5px 5px pink;      
+    }
+
+    .btn:active{
+      box-shadow: inset 0px 0px 0px pink;
+
+    }
+    .btnPlus {
+      background-color: blue;
+      text-shadow: 2px 2px 2px skyblue;
+    }
+    .btnPlus:active{
+      box-shadow: inset 0px 0px 0px skyblue;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>0</h1>
+    <div class="btnContainer">
+      <button class="btn" onclick="subtractnumber();">-</button>
+      <button class="btn btnPlus" onclick="addnumber();">+</button>
+    </div>
+  </div>
+  
+  <script>
+    let number = 0;
+    function addnumber() {
+      number++;
+      document.querySelector("h1").innerText = number;
+    }
+
+    function subtractnumber() {
+      number--;
+      document.querySelector("h1").innerText = number;
+    }
+  </script>
+</body>
+</html>
